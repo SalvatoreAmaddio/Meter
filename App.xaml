@@ -1,0 +1,21 @@
+﻿<Application x:Class="Testing.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Testing"
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Customs/Dictionary/ColumnLabelStyle.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/ConvertersFile.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/DatePicker2Style.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/SearchBoxStyle.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/ComboStyle.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/ListaStyle.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/ReportViewerStyle.xaml"/>
+                <ResourceDictionary Source="Customs/Dictionary/ToolbarStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

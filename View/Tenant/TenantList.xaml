@@ -1,0 +1,83 @@
+﻿<Page x:Class="Meter.View.TenantList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TenantList"
+      x:Name="Page"
+      xmlns:controller="clr-namespace:Meter.Controller"
+      xmlns:template="clr-namespace:Meter.View.Templates"
+      xmlns:customs="clr-namespace:Testing.Customs"
+      >
+
+    <Page.DataContext>
+        <controller:TenantListController/>
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Padding="5" Background="AliceBlue" CornerRadius="5" BorderThickness="1" BorderBrush="Black">
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <customs:SearchBox PlaceHolderText="Search..." CornerRadius="15"
+                                   Text="{Binding Search, UpdateSourceTrigger=PropertyChanged}" Grid.Column="0"/>
+                <Button Grid.Column="2" Style="{StaticResource AddNewButton}" />
+            </Grid>
+        </Border>
+
+        <customs:Lista Grid.Row="1" ItemsSource="{Binding RecordSource}" 
+                                    SelectedItem="{Binding SelectedRecord}"
+                       Filter="{Binding Filter}"
+                       OrderBy="{Binding Order}"
+                       >
+            <customs:Lista.HeaderChild>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Tenant Code" Style="{StaticResource ColLabel}"/>
+                    <Label Content="First Name" Grid.Column="1" Style="{StaticResource ColLabel}"/>
+                    <Label Content="Last Name" Grid.Column="2" Style="{StaticResource ColLabel}"/>
+                    <Label Content="DOB" Grid.Column="3" Style="{StaticResource ColLabel}"/>
+                    <Label Content="Phone Number" Grid.Column="4" Style="{StaticResource ColLabel}"/>
+                    <Label Content="Email" Grid.Column="5" Style="{StaticResource ColLabel}"/>
+                    <Label Content="COMMANDS" Grid.Column="6" Grid.ColumnSpan="2" Style="{StaticResource ColLabel}"/>
+                </Grid>
+            </customs:Lista.HeaderChild>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <template:TenantListControlTemplate/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </customs:Lista>
+
+        <customs:RecordTracker Grid.Row="2" Tracker="{Binding RecordTracker}"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Meter.View.EmailError"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meter.View"
+        mc:Ignorable="d"
+        Title="Guide to set up your Google's email Verification" Height="450" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Padding="10"
+        ResizeMode="NoResize"
+        xmlns:EmailGuide="clr-namespace:Meter.View.EmailGuide"
+        >
+
+    <DockPanel>
+
+        <Button DockPanel.Dock="Left" Style="{StaticResource PreviousRecordButton}" Click="PreviousStep"/>
+        <Button DockPanel.Dock="Right" Style="{StaticResource NextRecordButton}" Click="NextStep"/>
+
+        <EmailGuide:Step1 x:Name="Step1"/>
+        <EmailGuide:Step2 x:Name="Step2"/>
+        <EmailGuide:Step3 x:Name="Step3"/>
+        <EmailGuide:Step4 x:Name="Step4"/>
+        <EmailGuide:Step5 x:Name="Step5"/>
+        <EmailGuide:Step6 x:Name="Step6"/>
+        <EmailGuide:Step7 x:Name="Step7"/>
+        <EmailGuide:Step8 x:Name="Step8"/>
+        <EmailGuide:Step9 x:Name="Step9"/>
+    </DockPanel>
+</Window>

@@ -1,0 +1,181 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<PublishSingleFile>true</PublishSingleFile>
+	<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+	<Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="Img\address.png" />
+    <None Remove="Img\ArrowLeft.png" />
+    <None Remove="Img\ArrowRight.png" />
+    <None Remove="Img\delete.png" />
+    <None Remove="Img\dev.png" />
+    <None Remove="Img\emailsetting.png" />
+    <None Remove="Img\file.png" />
+    <None Remove="Img\folder.png" />
+    <None Remove="Img\invoice.png" />
+    <None Remove="Img\lock.png" />
+    <None Remove="Img\logo.png" />
+    <None Remove="Img\outlook_icon.png" />
+    <None Remove="Img\partyicon.png" />
+    <None Remove="Img\PDF_icon.png" />
+    <None Remove="Img\plus.png" />
+    <None Remove="Img\pricesetting.png" />
+    <None Remove="Img\reading.png" />
+    <None Remove="Img\removefilter.png" />
+    <None Remove="Img\save.png" />
+    <None Remove="Img\select.png" />
+    <None Remove="Img\Step1.jpg" />
+    <None Remove="Img\Step2.jpg" />
+    <None Remove="Img\Step3.jpg" />
+    <None Remove="Img\Step4.jpg" />
+    <None Remove="Img\Step5.jpg" />
+    <None Remove="Img\Step6.jpg" />
+    <None Remove="Img\Step8.jpg" />
+    <None Remove="Img\tenant.png" />
+    <None Remove="Img\WhatsApp_icon.png" />
+    <None Remove="Microsoft.VC110.CRT\msvcp100.dll" />
+    <None Remove="Microsoft.VC110.CRT\msvcp140d.dll" />
+    <None Remove="Microsoft.VC110.CRT\msvcp140d_atomic_wait.dll" />
+    <None Remove="Microsoft.VC110.CRT\msvcp140d_codecvt_ids.dll" />
+    <None Remove="Microsoft.VC110.CRT\msvcr100.dll" />
+    <None Remove="Microsoft.VC110.CRT\ucrtbase.dll" />
+    <None Remove="Microsoft.VC110.CRT\ucrtbased.dll" />
+    <None Remove="Microsoft.VC110.CRT\ucrtbase_clr0400.dll" />
+    <None Remove="Microsoft.VC110.CRT\ucrtbase_enclave.dll" />
+    <None Remove="Microsoft.VC110.CRT\vccorlib110.dll" />
+    <None Remove="Microsoft.VC110.CRT\vcruntime140d.dll" />
+    <None Remove="Microsoft.VC110.CRT\vcruntime140_1d.dll" />
+    <None Remove="msvcp100.dll" />
+    <None Remove="msvcr100.dll" />
+    <None Remove="PDFDriverHelper.exe" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\Meter.deps.json" />
+    <Content Include="bin\Debug\net6.0-windows\Meter.runtimeconfig.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Include="DB\MyDb.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\msvcp140d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\msvcp140d_atomic_wait.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\msvcp140d_codecvt_ids.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\ucrtbase.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\ucrtbased.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\ucrtbase_clr0400.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\ucrtbase_enclave.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\vcruntime140d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\vcruntime140_1d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Img\dev.png" />
+    <Resource Include="Img\emailsetting.png" />
+    <Resource Include="Img\lock.png" />
+    <Resource Include="Img\ArrowRight.png" />
+    <Resource Include="Img\ArrowLeft.png" />
+    <Resource Include="Img\file.png" />
+    <Resource Include="Img\logo.png" />
+    <Resource Include="Img\outlook_icon.png" />
+    <Resource Include="Img\partyicon.png" />
+    <Resource Include="Img\PDF_icon.png" />
+    <Resource Include="Img\plus.png" />
+    <Resource Include="Img\pricesetting.png" />
+    <Resource Include="Img\removefilter.png" />
+    <Resource Include="Img\select.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\alpine-x64\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-arm64\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-armel\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-arm\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-mips64\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-musl-x64\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\linux-x86\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\win-arm64\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\win-arm\native\" />
+    <Folder Include="bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\" />
+    <Folder Include="RecordSource\Args\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0-windows\DB\Db.sqlite" />
+    <None Include="bin\Debug\net6.0-windows\Meter.dll" />
+    <None Include="bin\Debug\net6.0-windows\Meter.exe" />
+    <None Include="bin\Debug\net6.0-windows\Meter.pdb" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll" />
+    <None Include="bin\Debug\net6.0-windows\System.Data.SQLite.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.117" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="System.Management" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Img\address.png" />
+    <Resource Include="Img\delete.png" />
+    <Resource Include="Img\folder.png" />
+    <Resource Include="Img\invoice.png" />
+    <Resource Include="Img\reading.png" />
+    <Resource Include="Img\save.png" />
+    <Resource Include="Img\Step1.jpg" />
+    <Resource Include="Img\Step2.jpg" />
+    <Resource Include="Img\Step3.jpg" />
+    <Resource Include="Img\Step4.jpg" />
+    <Resource Include="Img\Step5.jpg" />
+    <Resource Include="Img\Step6.jpg" />
+    <Resource Include="Img\Step8.jpg" />
+    <Resource Include="Img\tenant.png" />
+    <Resource Include="Img\whatsapp_icon.png" />
+    <Content Include="Microsoft.VC110.CRT\msvcp100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\vccorlib110.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.VC110.CRT\PDFDriverHelper.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+</Project>

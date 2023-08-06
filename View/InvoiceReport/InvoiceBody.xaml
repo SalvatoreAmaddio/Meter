@@ -1,0 +1,58 @@
+﻿<Grid x:Class="Testing.View.InvoiceBody"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Testing.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="50"
+        
+      >
+    <Grid.Resources>
+        <Style TargetType="Label" x:Key="Header" x:Name="Header">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="AliceBlue"/>
+        </Style>
+        
+    </Grid.Resources>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="165"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="130"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+    <Label Content="PERIODE CONSUMO" Grid.Column="0" Style="{DynamicResource Header}"/>
+    <Label Content="LECTURA" Grid.Column="1" Style="{StaticResource Header}"/>
+    <Label Content="CONSUMO" Grid.Column="2" Style="{StaticResource Header}"/>
+    <Label Content="PRECIO POR METR" Grid.Column="3" Style="{StaticResource Header}"/>
+    <Label Content="HONORARIOS" Grid.Column="4" Style="{StaticResource Header}"/>
+    <Label Content="TOTAL DEL MES" Grid.Column="5" Style="{StaticResource Header}"/>
+
+    <Label Grid.Row="1" Content="Lectura Anterior"/>
+    <Label Grid.Row="1" Content="{Binding Anterior}" Margin="90,0,0,0" Style="{StaticResource DateFormat}"/>
+
+    <Label Grid.Row="2" Content="Lectura Actual"/>
+    <Label Grid.Row="2" Content="{Binding Actual}" Margin="90,0,0,0" Style="{StaticResource DateFormat}"/>
+
+    <Label Grid.Row="1" Content="{Binding Reading1}" Grid.Column="1" HorizontalContentAlignment="Center"/>
+    <Label Grid.Row="2" Content="{Binding Reading2}" Grid.Column="1" HorizontalContentAlignment="Center"/>
+
+    <Label Grid.Row="1" Content="{Binding Consumo}" Grid.RowSpan="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+    <Label Grid.Row="1" Content="4" Grid.RowSpan="2" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+    <Label Grid.Row="1" Content="60" Grid.RowSpan="2" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+    <Label Grid.Row="1" Content="{Binding Invoice.Amount}" Grid.RowSpan="2" Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+</Grid>

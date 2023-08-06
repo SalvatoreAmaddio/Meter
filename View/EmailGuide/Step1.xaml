@@ -1,0 +1,30 @@
+﻿<RichTextBox x:Class="Meter.View.EmailGuide.Step1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Meter.View.EmailGuide"
+             mc:Ignorable="d" 
+             Padding="10" IsReadOnly="True"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             >
+        <FlowDocument>
+            <Paragraph>
+                Before sending an Email, you must get the Google's Authorisation for this Application to do so.
+            </Paragraph>
+            <Paragraph>
+                You can get the authorisation by following these simple steps:
+            </Paragraph>
+            <List>
+            <ListItem>
+                <Paragraph>
+                    Step 1: Log into your gmail account.
+                </Paragraph>
+            </ListItem>
+        </List>
+        <Paragraph>
+            <Image Source="/Img/Step1.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Paragraph>
+    </FlowDocument>
+</RichTextBox>

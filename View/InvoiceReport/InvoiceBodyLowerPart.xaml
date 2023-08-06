@@ -1,0 +1,28 @@
+﻿<Grid x:Class="Testing.View.InvoiceBodyLowerPart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Testing"
+             mc:Ignorable="d" 
+             Background="White">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Label Visibility="{Binding Invoice.OverdueTracker.ShowOverdue}"  Grid.Row="0" FontWeight="Bold" Content="{Binding Invoice.OverdueTracker.Overdue}" ContentStringFormat='{}SALDO ANTERIOR $ {0:#,0}' HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <Label Visibility="{Binding Invoice.ShowAmountPaid}" Grid.Row="1" FontWeight="Bold" Content="{Binding Invoice.CurrentAmountDue}" ContentStringFormat='{}TOTAL $ {0:#,0}' HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <Label Visibility="{Binding Invoice.ShowAmountPaid}" Grid.Row="2" FontWeight="Bold" Content="{Binding Invoice.AmountPaid}" ContentStringFormat='{}YA PAGADO $ {0:#,0}' HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <Line Grid.Row="3" Stroke="Black"
+     StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" X1="0" X2="900"/>
+    <Label Grid.Row="4" FontWeight="Bold" Content="{Binding Invoice.AmountDue}" ContentStringFormat='{}TOTAL A PAGAR $ {0:#,0}' HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+</Grid>

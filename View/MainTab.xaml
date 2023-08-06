@@ -1,0 +1,77 @@
+﻿<Window x:Class="Meter.View.MainTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meter.View"
+        mc:Ignorable="d"
+        Title="Water Billing" 
+        WindowState="Maximized"
+        Icon="/Img/logo.png"
+        >
+    <DockPanel>
+
+        <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
+            <ToolBar Band="1" BandIndex="1">
+                <Button Click="OpenSoftwareInfo" ToolTip="Software info">
+                    <Image Source="/Img/dev.png" MaxWidth="20"/>
+                </Button>
+
+                <Button Click="OpenPriceForm" ToolTip="Price Settings">
+                    <Image Source="/Img/pricesetting.png" MaxWidth="20"/>
+                </Button>
+
+                <Button Click="OpenEmailPassword" ToolTip="Gmail Password">
+                    <Image Source="/Img/lock.png" MaxWidth="20"/>
+                </Button>
+
+                <Button Click="OpenEmailSetting" ToolTip="Email setting">
+                    <Image Source="/Img/emailsetting.png" MaxWidth="20"/>
+                </Button>
+            </ToolBar>                
+        </ToolBarTray>
+        
+        <TabControl>
+            <TabItem Header="Tenant" Padding="10">
+                <Frame>
+                    <Frame.Content>
+                        <local:TenantList x:Name="TenantList"/>
+                    </Frame.Content>
+                </Frame>
+            </TabItem>
+
+            <TabItem Header="Addresses" Padding="10">
+                <Frame>
+                    <Frame.Content>
+                        <local:AddressList x:Name="Addresses"/>
+                    </Frame.Content>
+                </Frame>
+            </TabItem>
+
+            <TabItem Header="City" Padding="10">
+                <Frame>
+                    <Frame.Content>
+                        <local:CityList x:Name="CityList"/>
+                    </Frame.Content>
+                </Frame>
+            </TabItem>
+
+            <TabItem Header="Invoice" Padding="10">
+                <Frame>
+                    <Frame.Content>
+                        <local:InvoiceList x:Name="InvoiceList"/>
+                    </Frame.Content>
+                </Frame>
+            </TabItem>
+
+            <TabItem Header="Income Statement" Padding="10">
+                <Frame>
+                    <Frame.Content>
+                        <local:IncomeStatement x:Name="IncomeStatement"/>
+                    </Frame.Content>
+                </Frame>
+            </TabItem>
+
+        </TabControl>
+    </DockPanel>
+</Window>

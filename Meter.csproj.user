@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Salvatore\source\repos\Meter\Properties\PublishProfiles\FolderProfile3.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Customs\DatePicker2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customs\TitledBorder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Customs\RecordTracker.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SoftwareInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Email\EmailError.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step5.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step6.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step8.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EmailGuide\Step9.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Email\EmailPasswordManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Email\EmailSetting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\IncomeStatement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InvoiceReport\InvoiceBodyLowerPart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Address\AddressForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Address\AddressList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Address\AssignAddress.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\City\CityForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\City\CityList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InvoiceReport\InvoiceBody.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Invoice\InvoiceForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Invoice\InvoiceList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InvoiceReport\InvoicePaper.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InvoiceReport\InvoiceViewer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MainTab.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PriceForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ReadingForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\AddressListColumns.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\AddressListControlTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\CityColumnTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\IncomeStatementColumnTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\SelectAddressColumns.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\SelectAddressTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Templates\TenantListControlTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Tenant\TenantForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Tenant\TenantList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InvoiceReport\InvoiceHeader.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Customs\DatePicker2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customs\Dictionary\ColumnLabelStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customs\Dictionary\DatePicker2Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customs\TitledBorder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customs\Dictionary\ToolbarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customs\RecordTracker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SoftwareInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Email\EmailError.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step5.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step6.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step7.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step8.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EmailGuide\Step9.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Email\EmailPasswordManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Email\EmailSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\IncomeStatement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InvoiceReport\InvoiceBodyLowerPart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Address\AddressForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Address\AddressList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Address\AssignAddress.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\City\CityForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\City\CityList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InvoiceReport\InvoiceBody.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Invoice\InvoiceForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Invoice\InvoiceList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InvoiceReport\InvoicePaper.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InvoiceReport\InvoiceViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainTab.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PriceForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ReadingForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\AddressListColumns.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\AddressListControlTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\CityColumnTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\IncomeStatementColumnTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\SelectAddressColumns.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\SelectAddressTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Templates\TenantListControlTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Tenant\TenantForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Tenant\TenantList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InvoiceReport\InvoiceHeader.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

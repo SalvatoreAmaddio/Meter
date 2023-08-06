@@ -1,0 +1,24 @@
+﻿<RichTextBox x:Class="Meter.View.EmailGuide.Step9"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Meter.View.EmailGuide"
+             mc:Ignorable="d" 
+              Padding="10" IsReadOnly="True"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             >
+    <FlowDocument TextAlignment="Center">
+       
+                <Paragraph >
+                    You are all set!
+                </Paragraph>
+          
+        <Paragraph>
+            <Image Source="/Img/partyicon.png" Width="300"/>
+        </Paragraph>
+
+    </FlowDocument>
+
+</RichTextBox>
