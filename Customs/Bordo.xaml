@@ -1,0 +1,27 @@
+﻿<Border Style="{DynamicResource BorderStyle1}" x:Class="Testing.Customs.Bordo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Testing.Customs"
+             mc:Ignorable="d" 
+        >
+
+    <Border.Resources>
+        <Style x:Key="BorderStyle1" TargetType="{x:Type Border}">
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=HeaderHeight,RelativeSource={RelativeSource Self},Converter={StaticResource HeightConv}}" Value="True"/>
+                        <Condition Binding="{Binding Path=FooterTop,RelativeSource={RelativeSource Self},Converter={StaticResource HeightConv}}" Value="True"/>
+                        <Condition Binding="{Binding Path=ActualHeight,RelativeSource={RelativeSource Self},Converter={StaticResource HeightConv}}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="local:Bordo.HeightHasExceeded" 
+                            Value="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
+                            />
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Border.Resources>
+</Border>
+

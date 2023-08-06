@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ConvertersFile.xaml"/>
+        <ResourceDictionary Source="SearchBoxStyle.xaml"/>
+        <ResourceDictionary Source="ComboStyle.xaml"/>
+        <ResourceDictionary Source="ListaStyle.xaml"/>
+        <ResourceDictionary Source="ReportViewerStyle.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

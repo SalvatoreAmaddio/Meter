@@ -1,0 +1,206 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ViewFileButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="View File"/>
+        <Setter Property="Content" Value="VIEW"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/file.png"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AddNewButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Add New Record"/>
+        <Setter Property="Content" Value="Add New"/>
+        <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=Page},Path=DataContext.OpenNewRecordCMD}"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/plus.png"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    
+    
+    <Style x:Key="DeleteButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Delete Record"/>
+        <Setter Property="Content" Value="DELETE"/>
+        <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=Page},Path=DataContext.DeleteRecordCMD}"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/delete.png" MaxWidth="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="OpenButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Open Record"/>
+        <Setter Property="Content" Value="OPEN"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=Page},Path=DataContext.OpenRecordCMD}"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/folder.png" MaxWidth="20" HorizontalAlignment="Stretch"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="UnfilterButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Unfilter"/>
+        <Setter Property="Content" Value="UF"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/removefilter.png" MaxWidth="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SelectButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Select Record"/>
+        <Setter Property="Content" Value="Select"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/select.png" MaxWidth="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="SaveListButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Save Record"/>
+        <Setter Property="Content" Value="SAVE"/>
+        <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=Page},Path=DataContext.SaveRecordCMD}"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
+
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/save.png" MaxWidth="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PDFButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Print to PDF"/>
+        <Setter Property="BorderThickness" Value="0.1"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/PDF_icon.png" Width="35"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="OutlookButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Send via Outlook"/>
+        <Setter Property="BorderThickness" Value="0.1"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/outlook_icon.png" Width="35"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="WhatsAppButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Send via Whats App"/>
+        <Setter Property="BorderThickness" Value="0.1"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/whatsapp_icon.png" Width="35"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NextRecordButton" TargetType="Button">
+        <Setter Property="ToolTip" Value="Next Record"/>
+        <Setter Property="BorderThickness" Value="0.1"/>
+        <Setter Property="Command" Value="{Binding GoNextCMD}"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="DockPanel.Dock" Value="Right"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/ArrowRight.png" Width="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PreviousRecordButton" TargetType="Button">
+        <Setter Property="Command" Value="{Binding GoPreviousCMD}"/>
+        <Setter Property="ToolTip" Value="Previous Record"/>
+        <Setter Property="BorderThickness" Value="0.1"/>
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="DockPanel.Dock" Value="Left"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Image Source="/Img/ArrowLeft.png" Width="20"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="DateFormat" TargetType="Label">
+        <Setter Property="ContentStringFormat" Value='{}{0:dd/MM/yyyy}'/>
+    </Style>
+
+    <Style x:Key="DoubleFormat" TargetType="Label">
+        <Setter Property="ContentStringFormat" Value='{}{0:#,#.0}'/>
+    </Style>
+
+    <Style x:Key="CurrencyFormat" TargetType="Label">
+        <Setter Property="ContentStringFormat" Value='{}{0:C}'/>
+    </Style>
+
+    <Style x:Key="ColLabel" TargetType="Label">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="0.3"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+    </Style>
+    
+</ResourceDictionary>

@@ -1,0 +1,70 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Testing.Customs"
+                    >
+
+    <Style TargetType="{x:Type local:AbstractSearchBox}" x:Key="MyStyle">
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Style.Triggers>
+            
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Path=Text,RelativeSource={RelativeSource Self},Converter={StaticResource Conv}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="ShowPlaceHolder" Value="Hidden"/>
+            </MultiDataTrigger>
+            
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Path=Text,RelativeSource={RelativeSource Self},Converter={StaticResource Conv}}" Value="True"/>
+                    <Condition Binding="{Binding Path=IsKeyboardFocusWithin,RelativeSource={RelativeSource Self}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <Setter Property="ShowButton" Value="Visible"/>
+            </MultiDataTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Text" Value=""/>
+                    <Condition Property="IsMandatory" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ShowMandatoryLabel" Value="Visible"/>
+            </MultiTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type local:AbstractSearchBox}" BasedOn="{StaticResource MyStyle}" x:Key="SearchStyle">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:AbstractSearchBox}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True" CornerRadius="{TemplateBinding CornerRadius}">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Stretch" Margin="{TemplateBinding MyMargin2}"/>
+                        </Border>
+                        <Label Visibility="{Binding ShowPlaceHolder, RelativeSource={RelativeSource TemplatedParent}}" Content="{Binding PlaceHolderText, RelativeSource={RelativeSource TemplatedParent}}"
+                             FontStyle="Italic" Foreground="LightSlateGray" VerticalContentAlignment="Center" Margin="{TemplateBinding MyMargin3}"/>
+
+                        <Label FontWeight="ExtraBold" 
+                               HorizontalAlignment="Right" Margin="{TemplateBinding MyMargin}" VerticalAlignment="Center"
+                               Padding="5" 
+                               Content="*" 
+                               Foreground="Red"
+                               Visibility="{TemplateBinding ShowMandatoryLabel}"
+                               />
+
+                        <Button Content="X" Visibility="{Binding ShowButton, RelativeSource={RelativeSource TemplatedParent}}" 
+                                BorderThickness="0" Background="White" 
+                                MaxHeight="23"
+                                VerticalContentAlignment="Top"
+                                HorizontalAlignment="Right" Margin="{TemplateBinding MyMargin}" VerticalAlignment="Center"
+                                Command="{Binding ResetTextCmd,RelativeSource={RelativeSource TemplatedParent}}" Padding="5"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
